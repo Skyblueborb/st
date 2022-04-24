@@ -5,8 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=12:antialias=true:autohint=true";
-static char *font2[] = { "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
+//static char *font = "mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "LiterationMono Nerd Font:style=Regular:pixelsize=14:antialias=true;autohint=true";
+static char *font2[] = { "RobotoMono Nerd Font Mono:style=Medium,Regular" };
 static int borderpx = 2;
 
 /*
@@ -19,7 +20,7 @@ static int borderpx = 2;
  */
 static char *shell = "/bin/sh";
 char *utmp = NULL;
-/* scroll program: to enable use a string like "scroll" */
+/* scroll program: to enddable use a string like "scroll" */
 char *scroll = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
@@ -104,10 +105,10 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.9;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
@@ -155,7 +156,7 @@ unsigned int background = 258;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 6;
 
 /*
  * Default columns and rows numbers
@@ -229,8 +230,8 @@ ResourcePref resources[] = {
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 1} },
-	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 1} },
+	{ ShiftMask,            Button4, kscrollup,      {.i = 4} },
+	{ ShiftMask,            Button5, kscrolldown,    {.i = 4} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
