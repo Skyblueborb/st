@@ -5,34 +5,34 @@ features that make it literally the best terminal emulator ever:
 
 ## Unique features (using dmenu)
 
-+ **follow urls** by pressing `alt-l`
-+ **copy urls** in the same way with `alt-y`
-+ **copy the output of commands** with `alt-o`
+- **follow urls** by pressing `alt-l`
+- **copy urls** in the same way with `alt-y`
+- **copy the output of commands** with `alt-o`
 
 ## Bindings for
 
-+ **scrollback** with `alt-↑/↓` or `alt-pageup/down` or `shift` while scrolling the
-  mouse.
-+ OR **vim-bindings**: scroll up/down in history with `alt-k` and `alt-j`.
+- **scrollback** with `alt-↑/↓` or `alt-pageup/down` or `shift` while scrolling
+  the mouse.
+- OR **vim-bindings**: scroll up/down in history with `alt-k` and `alt-j`.
   Faster with `alt-u`/`alt-d`.
-+ **zoom/change font size**: same bindings as above, but holding down shift as
+- **zoom/change font size**: same bindings as above, but holding down shift as
   well. `alt-home` returns to default
-+ **copy text** with `alt-c`, **paste** is `alt-v` or `shift-insert`
+- **copy text** with `alt-c`, **paste** is `alt-v` or `shift-insert`
 
 ## Pretty stuff
 
-+ Compatibility with `Xresources` and `pywal` for dynamic colors.
-+ Default [gruvbox](https://github.com/morhetz/gruvbox) colors otherwise.
-+ Transparency/alpha, which is also adjustable from your `Xresources`.
-+ Default font is system "mono" at 14pt, meaning the font will match your
-  system font.
+- Compatibility with `Xresources` and `pywal` for dynamic colors.
+- Default [gruvbox](https://github.com/morhetz/gruvbox) colors otherwise.
+- Transparency/alpha, which is also adjustable from your `Xresources`.
+- Default font is system "mono" at 14pt, meaning the font will match your system
+  font.
 
 ## Other st patches
 
-+ Boxdraw
-+ Ligatures
-+ font2
-+ updated to latest version 0.8.4
+- Boxdraw
+- Ligatures
+- font2
+- updated to latest version 0.8.5
 
 ## Installation for newbs
 
@@ -44,13 +44,13 @@ cd st
 sudo make install
 ```
 
-Obviously, `make` is required to build. `fontconfig` is required for the
-default build, since it asks `fontconfig` for your system monospace font. It
-might be obvious, but `libX11` and `libXft` are required as well. Chances are,
-you have all of this installed already.
+Obviously, `make` is required to build. `fontconfig` is required for the default
+build, since it asks `fontconfig` for your system monospace font. It might be
+obvious, but `libX11` and `libXft` are required as well. Chances are, you have
+all of this installed already.
 
-On OpenBSD, be sure to edit `config.mk` first and remove `-lrt` from the
-`$LIBS` before compiling.
+On OpenBSD, be sure to edit `config.mk` first and remove `-lrt` from the `$LIBS`
+before compiling.
 
 Be sure to have a composite manager (`xcompmgr`, `picom`, etc.) running if you
 want transparency.
@@ -81,7 +81,8 @@ To be clear about the color settings:
 - If there are Xresources colors defined, those will take priority.
 - But if `wal` has run in your session, its colors will take priority.
 
-Note that when you run `wal`, it will negate the transparency of existing windows, but new windows will continue with the previously defined transparency.
+Note that when you run `wal`, it will negate the transparency of existing
+windows, but new windows will continue with the previously defined transparency.
 
 ## Notes on Emojis and Special Characters
 
@@ -90,8 +91,8 @@ If st crashes when viewing emojis, install
 
 Note that some special characters may appear truncated if too wide. You might
 want to manually set your prefered emoji/special character font to a lower size
-in the `config.h` file to avoid this. By default, JoyPixels is used at a
-smaller size than the usual text.
+in the `config.h` file to avoid this. By default, JoyPixels is used at a smaller
+size than the usual text.
 
 ## Contact
 
