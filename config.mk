@@ -24,7 +24,7 @@ LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft -lXrender\
 
 # flags
 STCPPFLAGS = -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=600
-STCFLAGS = $(INCS) $(STCPPFLAGS) $(CPPFLAGS)-O3 -mllvm -polly
+STCFLAGS = $(INCS) $(STCPPFLAGS) $(CPPFLAGS)-O3 -falign-functions=32 -mllvm -polly -fno-math-errno -fno-trapping-math -fno-common
 STLDFLAGS = $(LIBS) $(LDFLAGS)
 
 # OpenBSD:
